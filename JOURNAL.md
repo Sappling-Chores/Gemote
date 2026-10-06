@@ -77,5 +77,38 @@ Also, The workflow could change depending on what I feel like, so I guess you co
 
 **Total time spent: 3.2 hours**
 
+# October 7: Got the board's symbol..
 
+I know, I know, its been more than 15 days since I wrote my last journal and its a bit relieving that I am finally getting back to it. Its really frustrating when you are in the middle of a project and life shit happens. Specially for me, I have my finals coming up, the college applications, the continuous thought of the future and of the life.  
+And it scares me. It scares me to the extent that I had my first ever anxiety attack last week. 
+
+Thanks to my friend I was able to get my shit together. 
+
+Okay! that aside, I managed to put some work into the schematics. And as mentioned in my previous devlog I am going to be using [SEEED XIAO nRF52840 Sense PLUS](https://wiki.seeedstudio.com/XIAO_BLE/) as the micro controller. I chose this specific variant because I get just enough number of pins to work with and ofc more reasons I have stated in my previous devlog. 
+
+Now, coming back to schematic part — 
+
+I had hard time finding the kicad_symbol for the mcu. I mean I looked it up on [https://wiki.seeedstudio.com/XIAO_BLE/](https://wiki.seeedstudio.com/XIAO_BLE/), and it did have a link for design footprints and symbols. 
+
+![alt text](JOURNAL_ASSETS/journal3_image3.png)
+
+I added it in my kicad symbol library but for some reason it wouldn't appear in the symbol list.
+
+So, I tried a different approach. I first downloaded the kicad project file from the website.
+
+![alt text](JOURNAL_ASSETS/journal3_image4.png)
+
+Then, opened the project in my kicad and exported the symbol of mcu using edit in symbol editor property.
+
+![alt text](JOURNAL_ASSETS/journal3_image6.png)
+
+\*sigh!!* 😭😭
+
+After frying my brain for more than an hour I finally got it in the symbol list, then did some labelling. 
+
+![alt text](JOURNAL_ASSETS/journal3_image5.png)
+
+**Total time spent: 3.8 hours**
+
+----
 
