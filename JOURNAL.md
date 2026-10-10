@@ -150,7 +150,7 @@ The direction of the induced current depends on the current before the sudden ch
 
 Finally, I completed the rest of schematics which was pretty intuitive.
 
-![alt text](Schematics/GEMOTE.svg)
+![alt text](Schematic/GEMOTE.svg)
 
 Now time for coding!! — **I guess**. Also, I hope I dont come back to schematic again😭.
 
