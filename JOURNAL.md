@@ -112,3 +112,58 @@ After frying my brain for more than an hour I finally got it in the symbol list,
 
 ----
 
+# October 10: Schematics complete!
+
+Before I moved on to the other parts of the schematic, I wanted to have a basic idea about the board's battery compatibility. Although I knew that most SEEED XIAO Series have somewhat similar battery charging and protection circuitry, it was then that I realised there might be something wrong with my schematic symbol. 
+
+So, basically, the board uses pin P0.14 and P0.31 for battery voltage monitoring with the ADC on P0.31.
+
+![alt text](JOURNAL_ASSETS/journal4_image3.png)
+
+I was a little confused by the fact that I had a breakout pin P0.31 on my board symbol but, in the documentation it says you can read the battery voltage from P0.31. 
+
+And **BOY!!** My intuition was right.   
+When I looked more closely at the schematics I realised that the wiring looked a little bit similar to how we read analog values from sensors(e.g., Photoresistor). 
+
+![alt text](JOURNAL_ASSETS/journal4_image4.png)
+
+*So why make the breakout pin if you already got the pin in use??* — **"I DONT KNOW"**
+
+
+So, do I need to change my symbol??   
+Well, I first thought of designing the symbol myself, and I even got started with the symbol design. But I thought I should compare my symbol with the breakout board on the official website one last time. 
+
+![alt text](JOURNAL_ASSETS/journal4_image5.png)
+
+![alt text](JOURNAL_ASSETS/journal4_image6.png)
+
+And honestly, there weren't any major differences, just some extra pins and that was a relief. Then, I used a variable resistor symbol for flex sensors because essentially it is a resistor which changes its resistance based on how much its bent. Then, I wired and also used a 10k resistor as voltage divider which I might change the value of if necessary.
+
+![alt text](JOURNAL_ASSETS/journal4_image1.png)
+
+Next, I started working on the feedback part and I decided to go with mofset setup to control the ON/OFF and the frequency of the vibration of motor(PWM) by connecting the base of mofset with a PWM pin. I also learnt that you need to have a diode connected in parallel between the two pins of motor because when you turn off the current the coil of motor generates an induced voltage due to sudden change in current. 
+
+![alt text](JOURNAL_ASSETS/journal4_image2.png)
+
+The direction of the induced current depends on the current before the sudden change(i.e. decrease) as it tries to resists the change in magnetic flux. So, the diode in parallel makes a one way circuit for the induced current to flow and reenter the coil of motor(same direction) and that is the reason why motors stops gradually as the induced current decreases gradually.
+
+
+Finally, I completed the rest of schematics which was pretty intuitive.
+
+![alt text](Schematics/GEMOTE.svg)
+
+Now time for coding!! — **I guess**. Also, I hope I dont come back to schematic again😭.
+
+**Total time spent: 4.3 hours**
+
+-----
+
+
+
+
+
+
+
+
+
+
