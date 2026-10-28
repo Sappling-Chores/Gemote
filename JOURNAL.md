@@ -158,6 +158,40 @@ Now time for coding!! — **I guess**. Also, I hope I dont come back to schemati
 
 -----
 
+# October 28: Coding day
+
+Last week I thought I should start working on the code part for my project and I did some research on the workflow.  
+And learnt that there are two ways that I could use my sensors as mouse input — 
+
+* We code the firmware directly without needing external software on the device, which is how most mouse / keyboard works. 
+* We use an external software / python script to work alongside the hardware / sensor data for the operation on the device(i.e. mouse input).
+
+And I decided that I would go for the latter for development as it would be easier to debug logic part in python and I woudlnt have to worry much about memory and shit. And once I have everything working to my satisfaction, I would try put everything on the hardware. 
+
+I sat down and opened the GEMOTE folder in Vscode but, I didnt know what to do as I had never worked with an IMU or flex sensor before. I did checked for parts on [tinkercad](https://tinkercad.com) and [wokwi](https://wokwi.com) in hopes that I would be able to code my project without having an actual hardware irl.  But, soon did I realized that the sensors in wokwi or tinkercad are unrealistically tuned for real world. 
+
+So, I used one of my 10$ hardware grant to buy a 6-axis IMU and a flex sensor and spend the rest on other components. I wanted to get a 9 axis IMU but I couldn't afford that so I got the closest IMU I could get. 
+
+Then, I wired everything up — 
+
+![alt text](JOURNAL_ASSETS/journal5_image1.jpg)
+
+Components used above:
+
+1. [SEEED XIAO ESP32 S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+2. [LSM6DSO 6-axis IMU](https://robocraze.com/products/smartelex-lsm6dso-6-dof-accelerometer-and-gyroscope-sensor-breakout)
+3. [Flex sensor 2.2 inches](https://robocraze.com/products/flex-sensor-2-2)
+
+Then, I went on coding and spend more than 3 hours figuring out why my serial monitor wasnt working 😭😭. 
+I still dont know what was the problem, but it works now and that is all I want. Then I wrote a python script to control the clicks using flex sensor which was **pretty fucking cool!!!!!!!**.
+
+**Total time spent: 8.1 hours**
+
+
+
+
+
+
 
 
 
